@@ -1,9 +1,11 @@
 # Client-Folder-Structure Guide
 
-install
+`Next.js / Typescript / Recoil / React-Query / Styled-components`
+
+install command
 
      yarn create next-app ./ --typescript
-     yarn add styled-components styled-reset @tanstack/react-query
+     yarn add recoil styled-components styled-reset @tanstack/react-query
      yarn add -D @tanstack/react-query-devtools
 
 # Structure
@@ -81,3 +83,5 @@ Next.js는 pages내에서 src라는 이름의 폴더는 라우팅하지 않기 �
 SOLID 원칙 중 `개방-폐쇄 원칙(OCP: Open/closed principle)`에도 잘 맞는 구조입니다.
 
 이제 우리는 Card의 원형은 수정하기 힘들지만 도메인에 종속된 WalletCard는 아무렇지 않게 수정할 수 있습니다. 또한 WalletCard를 수정한다고 하여 다른 유형들의 Card들이 영향받지 않고 각자 독립적으로 확장될 수 있습니다.
+
+## 3. styles
