@@ -10,17 +10,19 @@ install command
 
 # Structure
 
-    - common
-    - pages
-    - styles
-    - hooks
-    - utils
-    - lib
-    - constants
-    - types
-    - atoms
-    - api
     - public
+    - pages
+    - src
+      - common
+      - styles
+      - hooks
+      - utils
+      - lib
+      - constants
+      - types
+      - atoms
+      - api
+    
 
 ## 1. common
 
@@ -86,6 +88,27 @@ Next.js는 pages내에서 src라는 이름의 폴더는 라우팅하지 않기 �
 SOLID 원칙 중 `개방-폐쇄 원칙(OCP: Open/closed principle)`에도 잘 맞는 구조입니다.
 
 이제 우리는 Card의 원형은 수정하기 힘들지만 도메인에 종속된 WalletCard는 아무렇지 않게 수정할 수 있습니다. 또한 WalletCard를 수정한다고 하여 다른 유형들의 Card들이 영향받지 않고 각자 독립적으로 확장될 수 있습니다.
+
+** nextjs 추가 설정 
+
+```bash
+Build error occurred
+Error: Build optimization failed: found pages without a React Component as default export in
+```
+
+pages 폴더 내에서 다른 파일들과 같이 두려면 추가적으로 설정해줘야 될 것이 있습니다. 
+
+```ts
+module.exports = {
+  pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
+}
+```
+
+next.config.js에서 해당 옵션을 추가하고 이제 모든 라우팅 파일에는 page라는 확장자를 추가로 붙여줘야 합니다.
+
+
+
+https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions
 
 ## 3. styles
 

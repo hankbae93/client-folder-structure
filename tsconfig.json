@@ -17,18 +17,18 @@
 		"incremental": true,
 		"suppressImplicitAnyIndexErrors": true,
 		"paths": {
-			"@api/*": ["api/*"],
-			"@assets/*": ["assets/*"],
-			"@constants/*": ["constants/*"],
-			"@common/*": ["common/*"],
-			"@lib/*": ["lib/*"],
 			"@pages/*": ["pages/*"],
 			"@public/*": ["public/*"],
-			"@styles/*": ["styles/*"],
-			"@atoms/*": ["atoms/*"],
-			"@types/*": ["types/*"],
-			"@utils/*": ["utils/*"],
-			"@hooks/*": ["hooks/*"]
+			"@api/*": ["src/api/*"],
+			"@assets/*": ["src/assets/*"],
+			"@constants/*": ["src/constants/*"],
+			"@common/*": ["src/common/*"],
+			"@lib/*": ["src/lib/*"],
+			"@styles/*": ["src/styles/*"],
+			"@atoms/*": ["src/atoms/*"],
+			"@types/*": ["src/types/*"],
+			"@utils/*": ["src/utils/*"],
+			"@hooks/*": ["src/hooks/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
